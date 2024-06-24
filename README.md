@@ -66,3 +66,6 @@ para definir a versão do python em seu projeto, você deve acessar pelo termina
 ```
 
 pronto, agora você tem o `Python 3.12.3` definido para  seu projeto.
+
+
+# EM CONSTRUÇÃO ...

@@ -10,7 +10,7 @@
   <ul>
     <li> <a href="#techs">Tecnologias</a></li>
     <li> <a href="#id1">  Visão Geral</a> </li>
-    <li> <a href="#id2">  ...</a> </li>
+    <li> <a href="#id2"> Configuração do Ambiente</a> </li>
   </ul>
 </p>
 
@@ -26,7 +26,7 @@
 
 
 
-<h3>Visão Geral</h3>
+<h3 id="id1">Visão Geral</h3>
 
 API desenvolvida no curso ministrado pelo canal [Live de Python](https://www.youtube.com/@Dunossauro) ...
 
@@ -39,6 +39,10 @@ API desenvolvida no curso ministrado pelo canal [Live de Python](https://www.you
     <li> <a href="#id1">  Poetry ou pip</a> </li>
     <li> <a href="#id2"> FastAPI</a> </li>
   </ul>
+
+
+
+<h2 id="id2">Configuração do Ambiente</h2>
 
 Recomendo que use o [pyenv](https://github.com/pyenv/pyenv) para instalar a versão `3.12.3` do Python.
 
@@ -62,6 +66,3 @@ para definir a versão do python em seu projeto, você deve acessar pelo termina
 ```
 
 pronto, agora você tem o `Python 3.12.3` definido para  seu projeto.
-
-<h2>Configuração do Ambiente</h2>
-

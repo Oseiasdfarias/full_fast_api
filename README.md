@@ -2,7 +2,7 @@
 </p>
 
 <p align="center">
-  <img height="70px" src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png">
+  <img height="90px" src="./utils/fast_api_logo.png">
 </p>
 
 

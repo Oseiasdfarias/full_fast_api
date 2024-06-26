@@ -11,6 +11,8 @@
     <li> <a href="#techs">Tecnologias</a></li>
     <li> <a href="#id1">  Visão Geral</a> </li>
     <li> <a href="#id2"> Configuração do Ambiente</a> </li>
+    <li> <a href="#id3"> Instalando as dependências do Projeto</a> </li>
+    <li> <a href="#id4"> Rodando Códigos</a> </li>
   </ul>
 </p>
 
@@ -68,4 +70,80 @@ para definir a versão do python em seu projeto, você deve acessar pelo termina
 pronto, agora você tem o `Python 3.12.3` definido para  seu projeto.
 
 
-# EM CONSTRUÇÃO ...
+<h3 id="id3">Instalando as dependências do Projeto</h3>
+
+Para instalar as dependências usando o `poetry` basta executar o seguinte comando em seu terminal dentro da pasta raiz do projeto:
+
+```bash
+❯ poetry install
+```
+
+Caso queira instalar usando o `pip`, use o comando abaixo:
+
+```bash
+❯ pip install -r requirements.txt
+```
+
+> [!WARNING]
+> Certifique-se que seu ambiente esteja ativado.
+
+
+<h2 id="id4">Rodando Códigos</h2>
+
+Para executar os códigos, utilizaremos o `taskipy`, uma biblioteca em `Python` que facilita a criação de comandos para a execução de diversas ações.
+
+
+<h3 id="id5">Rodando os Testes</h3>
+
+Para rodar os testes basta executar o seguinte comando com o ambiente virtual ativado:
+
+
+```bash
+❯ task test
+```
+
+
+Saída:
+
+```bash
+All checks passed!
+==================================================== test session starts =====================================================
+platform linux -- Python 3.12.3, pytest-8.2.2, pluggy-1.5.0 -- /home/osfarias/workspace/workspace_python/fast_api/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/osfarias/workspace/workspace_python/fast_api
+configfile: pyproject.toml
+plugins: anyio-4.4.0, cov-5.0.0
+collected 5 items
+
+tests/test_app.py::test_read_root_deve_retornar_ok_e_ola_mundo PASSED                                                  [ 20%]
+tests/test_app.py::test_create_user PASSED                                                                             [ 40%]
+tests/test_app.py::test_read_users PASSED                                                                              [ 60%]
+tests/test_app.py::test_update_user PASSED                                                                             [ 80%]
+tests/test_app.py::test_delete_user PASSED                                                                             [100%]
+```
+
+
+<h3 id="id6">Rodando a API</h3>
+
+ 
+```bash
+❯ task run
+```
+
+
+Saída:
+
+<p align="center">
+  <img wigth="90%" src="./utils/run_api.png">
+</p>
+
+
+Acesando a documentação da API
+
+A página `localhost/docs` do FastAPI é uma interface gerada automaticamente pela biblioteca que fornece uma documentação interativa para sua API. Baseada no Swagger UI, esta página permite que desenvolvedores visualizem e testem todas as rotas e endpoints da API diretamente no navegador. Cada endpoint é detalhado com informações sobre métodos HTTP suportados, parâmetros de entrada, respostas possíveis e modelos de dados. A funcionalidade interativa permite enviar requisições e visualizar as respostas, facilitando a verificação e o debugging da API durante o desenvolvimento. Essa documentação dinâmica é uma ferramenta poderosa para garantir que a API esteja funcionando conforme o esperado e para melhorar a produtividade dos desenvolvedores.
+
+
+
+<p align="center">
+  <img wigth="90%" src="./utils/docs_api.png">
+</p>

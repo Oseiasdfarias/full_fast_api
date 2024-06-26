@@ -26,11 +26,15 @@
 </p>
 
 
-
+---
 
 <h3 id="id1">Visão Geral</h3>
 
 API desenvolvida no curso ministrado pelo canal [Live de Python](https://www.youtube.com/@Dunossauro) ...
+
+
+
+---
 
 
 <h3>Requisitos do projeto</h3>
@@ -86,6 +90,9 @@ Caso queira instalar usando o `pip`, use o comando abaixo:
 
 > [!WARNING]
 > Certifique-se que seu ambiente esteja ativado.
+
+
+---
 
 
 <h2 id="id4">Rodando Códigos</h2>

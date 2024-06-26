@@ -2,7 +2,7 @@
 </p>
 
 <p align="center">
-  <img height="120px" src="./utils/fast_api_logo.png">
+  <img height="140px" src="./utils/fast_api_logo.png">
 </p>
 
 

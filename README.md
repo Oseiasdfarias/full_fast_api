@@ -20,7 +20,7 @@
 
 <h3  id="techs">Tecnologias</h3>
 
-<p align=center> <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/> <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white"/> <img src=" https://img.shields.io/badge/Pytest-3670A0?style=for-the-badge&logo=Pytest&logoColor=white"/> <img src=" https://img.shields.io/badge/pydantic-3670A0?style=for-the-badge&logo=pydantic&logoColor=white"/> 
+<p align=center> <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/> <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white"/> <img src=" https://img.shields.io/badge/Pytest-3670A0?style=for-the-badge&logo=Pytest&logoColor=white"/> <img src=" https://img.shields.io/badge/pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white"/> 
 </p>
 
 

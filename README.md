@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img height="140px" src="./utils/fast_api_logo.png">
+  <img height="100px" src="./utils/fast_api_logo1.png">
 </p>
 
 

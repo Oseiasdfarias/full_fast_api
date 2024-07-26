@@ -14,7 +14,7 @@ def test_create_user(client):
         json={
             "username": "osieas",
             "email": "user@example.com",
-            "password": "string"
+            "password": "string",
         },
     )
 
@@ -23,20 +23,16 @@ def test_create_user(client):
     assert response.json() == {
         "username": "osieas",
         "email": "user@example.com",
-        "id": 1
+        "id": 1,
     }
 
 
 def test_read_users(client):
     response = client.get("/users")
     assert response.status_code == HTTPStatus.OK
-    assert response.json() == {"users": [
-        {
-            "username": "osieas",
-            "email": "user@example.com",
-            "id": 1
-        }
-    ]}
+    assert response.json() == {
+        "users": [{"username": "osieas", "email": "user@example.com", "id": 1}]
+    }
 
 
 def test_update_user(client):
@@ -46,15 +42,16 @@ def test_update_user(client):
             "password": "123",
             "username": "test_username",
             "email": "user@example.com",
-            "id": 1
-        })
+            "id": 1,
+        },
+    )
 
     assert response.status_code == HTTPStatus.OK
     assert response.json() == {
-            "username": "test_username",
-            "email": "user@example.com",
-            "id": 1
-        }
+        "username": "test_username",
+        "email": "user@example.com",
+        "id": 1,
+    }
 
 
 def test_delete_user(client):

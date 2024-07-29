@@ -131,10 +131,19 @@ def test_delete_user(client, user, token):
     assert response.json() == {"message": "User deleted!"}
 
 
-# def test_delete_user_not_found(client, user):
-#     response = client.delete("/users/2")
-#     assert response.status_code == HTTPStatus.NOT_FOUND
-#     assert response.json() == {"detail": "User not found."}
+def test_delete_user_not_oermission(client, user, token):
+    response = client.delete(
+        f"/users/{2}",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    assert response.status_code == HTTPStatus.BAD_REQUEST
+    assert response.json() == {'detail': 'Not enough permission.'}
+
+
+def test_delete_user_not_found(client, user):
+    response = client.delete("/users/2")
+    assert response.status_code == HTTPStatus.UNAUTHORIZED
+    assert response.json() == {'detail': 'Not authenticated'}
 
 
 def test_get_token(client, user):
@@ -148,3 +157,23 @@ def test_get_token(client, user):
     assert response.status_code == HTTPStatus.OK
     assert token["token_type"] == "bearer"
     assert "access_token" in token
+
+
+def test_get_token_incorret_email(client, user):
+    response = client.post(
+        "/token",
+        data={"username": "test.test", "password": user.clean_password},
+    )
+
+    assert response.status_code == HTTPStatus.BAD_REQUEST
+    assert response.json() == {"detail": "Incorrect email or password."}
+
+
+def test_get_token_incorret_password(client, user):
+    response = client.post(
+        "/token",
+        data={"username": user.email, "password": "1234"},
+    )
+
+    assert response.status_code == HTTPStatus.BAD_REQUEST
+    assert response.json() == {"detail": "Incorrect email or password."}

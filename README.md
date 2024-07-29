@@ -203,7 +203,7 @@ A imgem abaixo é a visalização dos dados usando o `DBeaver`, foi usando o `SQ
 
 
 <p align="center">
-  <img wigth="90%" src="./utils/db.png">
+  <img wigth="95%" src="./utils/db.png">
 </p>
 
 

@@ -187,7 +187,7 @@ Saída:
 <h3 id="id5">Acesando a documentação da API</h3>
 
 
-A página `http://127.0.0.1:8000/docs` do FastAPI é uma interface gerada automaticamente pela biblioteca que fornece uma documentação interativa para sua API. Baseada no Swagger UI, esta página permite que desenvolvedores visualizem e testem todas as rotas e endpoints da API diretamente no navegador. Cada endpoint é detalhado com informações sobre métodos HTTP suportados, parâmetros de entrada, respostas possíveis e modelos de dados. A funcionalidade interativa permite enviar requisições e visualizar as respostas, facilitando a verificação e o debugging da API durante o desenvolvimento. Essa documentação dinâmica é uma ferramenta poderosa para garantir que a API esteja funcionando conforme o esperado e para melhorar a produtividade dos desenvolvedores.
+A página `localhost:8000/docs` do FastAPI é uma interface gerada automaticamente pela biblioteca que fornece uma documentação interativa para sua API. Baseada no Swagger UI, esta página permite que desenvolvedores visualizem e testem todas as rotas e endpoints da API diretamente no navegador. Cada endpoint é detalhado com informações sobre métodos HTTP suportados, parâmetros de entrada, respostas possíveis e modelos de dados. A funcionalidade interativa permite enviar requisições e visualizar as respostas, facilitando a verificação e o debugging da API durante o desenvolvimento. Essa documentação dinâmica é uma ferramenta poderosa para garantir que a API esteja funcionando conforme o esperado e para melhorar a produtividade dos desenvolvedores.
 
 
 

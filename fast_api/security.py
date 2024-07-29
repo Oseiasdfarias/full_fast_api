@@ -12,13 +12,17 @@ from zoneinfo import ZoneInfo
 
 from fast_api.database import get_session
 from fast_api.models import User
+from fast_api.settings import Settings
 
-SECRET_KEY = "your-secret-key"  # Isso é provisório, vamos ajustar!
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+# Variáveis de Ambiente
+settings = Settings()
+SECRET_KEY = settings.SECRET_KEY
+ALGORITHM = settings.ALGORITHM
+ACCESS_TOKEN_EXPIRE_MINUTES = settings.ACCESS_TOKEN_EXPIRE_MINUTES
+
 
 pwd_context = PasswordHash.recommended()
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
 
 def get_password_hash(password: str):

@@ -14,6 +14,7 @@ def test_create_todo(client, token):
             "state": "draft",
         },
     )
+
     assert response.json() == {
         "id": 1,
         "title": "Test todo",
@@ -31,6 +32,7 @@ def test_list_todos_should_return_5_todos(session, client, user, token):
         "/todos/",
         headers={"Authorization": f"Bearer {token}"},
     )
+
     assert len(response.json()["todos"]) == expected_todos
 
 
@@ -45,6 +47,7 @@ def test_list_todos_pagination_should_return_2_todos(
         "/todos/?offset=1&limit=2",
         headers={"Authorization": f"Bearer {token}"},
     )
+
     assert len(response.json()["todos"]) == expected_todos
 
 
@@ -61,6 +64,7 @@ def test_list_todos_filter_title_should_return_5_todos(
         "/todos/?title=Test todo 1",
         headers={"Authorization": f"Bearer {token}"},
     )
+
     assert len(response.json()["todos"]) == expected_todos
 
 
@@ -77,6 +81,7 @@ def test_list_todos_filter_description_should_return_5_todos(
         "/todos/?description=desc",
         headers={"Authorization": f"Bearer {token}"},
     )
+
     assert len(response.json()["todos"]) == expected_todos
 
 

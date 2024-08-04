@@ -88,7 +88,7 @@ def patch_todo(
     return db_todo
 
 
-@router.delete('/{todo_id}', response_model=Message)
+@router.delete("/{todo_id}", response_model=Message)
 def delete_todo(todo_id: int, session: T_Session, user: T_CurrentUser):
     todo = session.scalar(
         select(Todo).where(Todo.user_id == user.id, Todo.id == todo_id)
@@ -96,10 +96,10 @@ def delete_todo(todo_id: int, session: T_Session, user: T_CurrentUser):
 
     if not todo:
         raise HTTPException(
-            status_code=HTTPStatus.NOT_FOUND, detail='Task not found.'
+            status_code=HTTPStatus.NOT_FOUND, detail="Task not found."
         )
 
     session.delete(todo)
     session.commit()
 
-    return {'message': 'Task has been deleted successfully.'}
+    return {"message": "Task has been deleted successfully."}

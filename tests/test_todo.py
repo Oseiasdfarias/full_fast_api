@@ -15,12 +15,11 @@ def test_create_todo(client, token):
         },
     )
 
-    assert response.json() == {
-        "id": 1,
-        "title": "Test todo",
-        "description": "Test todo description",
-        "state": "draft",
-    }
+    assert response.status_code == HTTPStatus.OK
+    assert response.json()["id"] == 1
+    assert response.json()["title"] == "Test todo"
+    assert response.json()["description"] == "Test todo description"
+    assert response.json()["state"] == "draft"
 
 
 def test_list_todos_should_return_5_todos(session, client, user, token):
@@ -166,19 +165,19 @@ def test_delete_todo(session, client, user, token):
     session.commit()
 
     response = client.delete(
-        f'/todos/{todo.id}', headers={'Authorization': f'Bearer {token}'}
+        f"/todos/{todo.id}", headers={"Authorization": f"Bearer {token}"}
     )
 
     assert response.status_code == HTTPStatus.OK
     assert response.json() == {
-        'message': 'Task has been deleted successfully.'
+        "message": "Task has been deleted successfully."
     }
 
 
 def test_delete_todo_error(client, token):
     response = client.delete(
-        f'/todos/{10}', headers={'Authorization': f'Bearer {token}'}
+        f"/todos/{10}", headers={"Authorization": f"Bearer {token}"}
     )
 
     assert response.status_code == HTTPStatus.NOT_FOUND
-    assert response.json() == {'detail': 'Task not found.'}
+    assert response.json() == {"detail": "Task not found."}

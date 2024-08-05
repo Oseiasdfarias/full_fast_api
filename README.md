@@ -32,9 +32,16 @@
 
 <h3 id="id1">Visão Geral</h3>
 
-API desenvolvida no curso ministrado pelo canal [Live de Python](https://www.youtube.com/@Dunossauro) ...
+Projeto completo de uma `Api Rest` com `FastAPI` desenvolvida no curso ministrado pelo canal [Live de Python](https://www.youtube.com/@Dunossauro).
 
 
+A proposta consite em desenvolver um `CRUD` de cadastro de usuário com `autenticação` e `autorização` de `usuário` e outro `CRUD` para uma aplicação `ToDo List` que se relaciona com a base de dados do usuário, assim, cada usuário cadastrado poderá ter um `ToDo List` que só pode ser acessa pelo usuário que a criou.
+
+
+
+<p align="center">
+  <img wigth="90%" src="./utils/diagrama_base_dados.svg">
+</p>
 
 ---
 

@@ -40,7 +40,7 @@ A proposta consite em desenvolver um `CRUD` de cadastro de usuário com `autenti
 
 
 <p align="center">
-  <img wigth="90%" src="./utils/diagrama_base_dados.svg">
+  <img width="60%" src="./utils/diagrama_base_dados.svg">
 </p>
 
 ---

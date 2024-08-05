@@ -35,13 +35,14 @@
 Projeto completo de uma `Api Rest` com `FastAPI` desenvolvida no curso ministrado pelo canal [Live de Python](https://www.youtube.com/@Dunossauro).
 
 
-A proposta consite em desenvolver um `CRUD` de cadastro de usuário com `autenticação` e `autorização` de `usuário` e outro `CRUD` para uma aplicação `ToDo List` que se relaciona com a base de dados do usuário, assim, cada usuário cadastrado poderá ter um `ToDo List` que só pode ser acessa pelo usuário que a criou.
+A proposta consite em desenvolver um `CRUD` de cadastro de usuário com `autenticação` e `autorização` de `usuário` e outro `CRUD` para uma aplicação `ToDo List` que se relaciona com a base de dados do usuário, assim, cada usuário cadastrado poderá ter um `ToDo List` que só pode ser acessa pelo usuário que o criou. A imagem a baixo mostra o diagrama relacional das tabelas.
 
 
 
 <p align="center">
   <img width="60%" src="./utils/diagrama_base_dados.svg">
 </p>
+
 
 ---
 
@@ -53,6 +54,9 @@ A proposta consite em desenvolver um `CRUD` de cadastro de usuário com `autenti
     <li> <a href="#techs">Python 11+</a></li>
     <li> <a href="#id1">  Poetry ou pip</a> </li>
     <li> <a href="#id2"> FastAPI</a> </li>
+    <li> <a href="#id2"> SQLAlchemy</a> </li>
+    <li> <a href="#id2"> Pydantic</a> </li>
+    <li> <a href="#id2"> PostgreSQL</a> </li>
   </ul>
 
 

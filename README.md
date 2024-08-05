@@ -208,6 +208,32 @@ A imgem abaixo é a visalização dos dados usando o `DBeaver`, foi usando o `SQ
 
 
 
+---
+
+
+<h2 id="id5">Dockenização da Aplicação</h2>
+
+Uma das formas de disponibilizar um  projeto com todas as dependências configuradas e pronta para uso é a utilização do docker, para o projeto em questão, FOI usaDA uma imagem do `Python 3.12`  e realizado a  instalação das demais dependências como o `poetry` e `Bibliotecas python`, além disso, foi usado uma imagem do `postgreSQL` para realizar a pessistência dos dados. além das configurações necessárias para que a aplicação pudesse ter acesso ao container do banco de dados.
+
+As configurações para a geração da imagem responsável por rodar a aplicação foram colocadas no arquivo `Dockerfile`, o arquivo `compose.yml` é responsável por estruturar os containers da aplicação `FastAPI` e do `PostgreSQL` além de realizar a configuração de comunicação entre a aplicação e o banco de dados.
+
+Como requisito para rodar o projeto usando o docker, é necessário instalar o [Docker](https://www.docker.com) e o [Docker Compose](https://docs.docker.com/compose/install/).
+
+com essas duas depêndencias instaladas, basta clonar esse repositório e acessar a pasta via terminal e executar o seguinte comando:
+
+
+```bash
+❯ docker compose up --build
+```
+
+Ao executar o comando, o docker irá baixar as imagens do `Python 3.12` e a do `PostgreSQL` além de realizar o `Build` da aplicação, caso tudo ocorra como o planejato você terá a aplicação rodando em sua máquina.
+
+
+<p align="center">
+  <img wigth="95%" src="./utils/docker_run.png">
+</p>
+
+basta acessar via navegador a aplicação pela url `localhost:8000/docs`. para sair da aplicação, basta usar usar o `Ctrl + C` do teclado.
 
 ---
 

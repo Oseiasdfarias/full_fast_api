@@ -109,7 +109,7 @@ Caso queira instalar usando o `pip`, use o comando abaixo:
 ---
 
 
-<h2 id="id4">Rodando Códigos</h2>
+<h2 id="id4">Rodando o Porjeto Localmente</h2>
 
 Para executar os códigos, utilizaremos o `taskipy`, uma biblioteca em `Python` que facilita a criação de comandos para a execução de diversas ações.
 
@@ -246,6 +246,42 @@ Ao executar o comando, o docker irá baixar as imagens do `Python 3.12` e a do `
 </p>
 
 basta acessar via navegador a aplicação pela url `localhost:8000/docs`. para sair da aplicação, basta usar usar o `Ctrl + C` do teclado.
+
+
+---
+
+<h2 id="id5">Automatizando os testes com Integração Contínua (CI)</h2>
+
+Para automatizar os testes foi usando o GitActions, para isso foi implementado no arquivo `.github/workflows/pipeline.yaml` as ações necessárias para rodar os códigos de testes. com isso toda vez que for feito um `push` ou `pull_request` no repositório será disparado um trigger que configurará o ambiente de testes e o realizará, caso os testes sejão bem sucedidos será imforamdo e caso contrário também, a imagem abaixo mostra um teste bem sucedido.
+
+
+<p align="center">
+  <img wigth="95%" src="./utils/testes_usando_gitactions.png">
+</p>
+
+---
+
+<h2 id="id5">Deploy no Fly.io e persistência de dados no Render</h2>
+
+
+O deploy do projeto foi realizado no [fly.io](https://fly.io) e para perssistir os dados foram usado o [render.com](https://render.com) com uma instância do banco `PostegreSQL`.
+
+Para realizar o deploy foi uasdo a `CLI` do fly.io configurando as variáveis de ambiente usando o comando `flyctl secrets set VARIÁVEL_DE_AMBIENTE=xxxxxxx`, já para o build do projeto e envio para a plataforma foi usado o comando `flyctl deploy --local-only --ha=false `.
+
+#### Log a aplicação no Fly.io
+
+<p align="center">
+  <img wigth="95%" src="./utils/log_no_fly.png">
+</p>
+
+#### Banco de dados no Render
+
+<p align="center">
+  <img wigth="95%" src="./utils/postgres_render.png">
+</p>
+
+
+
 
 ---
 

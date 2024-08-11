@@ -14,7 +14,7 @@
   <img height="100px" src="./utils/fast_api_logo1.png">
 </p>
 
-v
+
 <h3>Sumário</h3>
 
 
@@ -32,7 +32,7 @@ v
 
 ```mermaid
 graph TD;
-    A[FastAPI] --> A1[Controle de acesso / Gerenciamento de contas] --> A2[Gerenciamento de contas]
+    A[FastAPI] --> A1[Controle de acesso / Gerenciamento de usuários] --> A2[Gerenciamento de usuários]
     A2 --> A3[Criação de usuário]
     A2 --> A4[Atualização de usuário]
     A2 --> A5[Remoção de usuário]

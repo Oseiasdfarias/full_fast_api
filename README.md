@@ -283,6 +283,9 @@ O deploy do projeto foi realizado no [fly.io](https://fly.io) e para perssistir 
 
 Para realizar o deploy foi uasdo a `CLI` do fly.io configurando as variáveis de ambiente usando o comando `flyctl secrets set VARIÁVEL_DE_AMBIENTE=xxxxxxx`, já para o build do projeto e envio para a plataforma foi usado o comando `flyctl deploy --local-only --ha=false `.
 
+
+## [Acessa a Demostração](https://fast-api-todo-list.fly.dev/docs)
+
 #### Log a aplicação no Fly.io
 
 <p align="center">

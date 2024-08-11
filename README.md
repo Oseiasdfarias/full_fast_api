@@ -14,7 +14,7 @@
   <img height="100px" src="./utils/fast_api_logo1.png">
 </p>
 
-
+v
 <h3>Sumário</h3>
 
 
@@ -23,12 +23,27 @@
     <li> <a href="#id1">  Visão Geral</a> </li>
     <li> <a href="#id2"> Configuração do Ambiente</a> </li>
     <li> <a href="#id3"> Instalando as dependências do Projeto</a> </li>
-    <li> <a href="#id4"> Rodando Códigos</a> </li>
   </ul>
 </p>
 
 
 # **FastAPI - ToDo List com Cadastro de Usuário Autenticação e Autorização**
+
+
+```mermaid
+graph TD;
+    A[FastAPI] --> A1[Controle de acesso / Gerenciamento de contas] --> A2[Gerenciamento de contas]
+    A2 --> A3[Criação de usuário]
+    A2 --> A4[Atualização de usuário]
+    A2 --> A5[Remoção de usuário]
+    A1 --> A6[Acesso via JWT]
+    A --> B[ToDo List]
+    B --> B1[Criação de tarefas]
+    B --> B2[Pegar tarefas]
+    B --> B3[Atualização de tarefas]
+    B --> B4[Remoção de tarefa]
+
+```
 
 
 <h3 id="id1">Visão Geral</h3>
